@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Dulcemaría ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6ccff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            animation: backgroundFade 10s infinite alternate;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #d63384;
+            animation: fadeIn 2s ease-in-out, pulse 3s infinite;
+        }
+        .carousel {
+            position: center;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+            border-radius: 10px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .message, .feelings {
+            font-size: 18px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            animation: slideIn 2s ease-in-out, glow 2s infinite alternate;
+        }
+        .feelings {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+            border: 2px solid #d63384;
+            background-color: #ffe6ff;
+            animation: fadeIn 2s ease-in-out, pulse 3s infinite;
+        }
+        .feelings img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 10px rgba(255, 105, 180, 0.3); }
+            to { box-shadow: 0 0 20px rgba(255, 105, 180, 0.7); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes backgroundFade {
+            0% { background-color: #e6ccff; }
+            100% { background-color: #d9b3ff; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Para mi Dulcemaría ❤️</h1>
+        <p>Un rincón especial para la persona más maravillosa del mundo para mi chaparrita hermosa con amor el hombre que mas lo ama en el mundo.</p>
+        
+        <div class="carousel">
+            <img src="WhatsApp Image 2025-02-09 at 8.48.04 PM (3).jpeg" class="slide" alt="Momento especial 1">
+            <img src="WhatsApp Image 2025-02-09 at 8.48.04 PM.jpeg" class="slide" alt="Momento especial 2">
+            <img src="WhatsApp Image 2025-02-09 at 8.48.05 PM.jpeg" class="slide" alt="Momento especial 3">
+            <img src="WhatsApp Image 2025-04-02 at 8.59.49 AM.jpeg" class="slide" alt="Momento especial 2">
+        </div>
+        
+        <div class="message">
+            <p>Gracias por ser la luz de mi vida, por cada sonrisa y cada momento juntos. Esta página es solo un pequeño reflejo de lo mucho que significas para mí. ❤️</p>
+        </div>
+
+        <div class="feelings">
+            <img src="WhatsApp Image 2025-04-02 at 8.59.49 AM.jpeg" alt="Ícono de amor">
+            <h2>Mis sentimientos por ti 💜</h2>
+            <p>Cada día a tu lado es un regalo. Tu risa ilumina mis días, tu mirada me llena de paz y tu amor me hace la persona más feliz del mundo. No hay palabras suficientes para expresar cuánto te amo. Eres mi inspiración, mi sueño hecho realidad y mi todo. 💖</p>
+        </div>
+    </div>
+    
+    <script>
+        let index = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            index++;
+            if (index > slides.length) { index = 1; }
+            slides[index - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Cambia cada 3 segundos
+        }
+        showSlides();
+    </script>
+</body>
+</html>
